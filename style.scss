@@ -38,8 +38,16 @@ a {
 .navbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 75px 0;
   margin-bottom: 170px;
+
+  @media only screen and (max-width: 991px) {
+    padding: 25px 0;
+    img {
+      width: 100px;
+    }
+  }
 }
 
 .cta-btn-outline {
@@ -49,7 +57,11 @@ a {
   color: $pink;
   font-size: 15px;
   text-transform: capitalize;
-  height: 41px;
+
+  @media only screen and (max-width: 991px) {
+    padding: 5px 22px;
+    font-size: 13px;
+  }
 }
 
 .hero {
@@ -65,12 +77,21 @@ a {
     font-size: 42px;
     margin-bottom: 30px;
     text-align: center;
+
+    @media only screen and (max-width: 991px) {
+      font-size: 27px;
+    }
   }
 
   p {
     width: 50%;
     text-align: center;
     margin-bottom: 35px;
+
+    @media only screen and (max-width: 991px) {
+      width: 95%;
+      font-size: 14px;
+    }
   }
 
   img {
@@ -82,77 +103,94 @@ a {
   padding: 4em 0;
   margin: 0 4em;
 
+  @media only screen and (max-width: 991px) {
+    margin: 0;
+    padding-bottom: 0;
+  }
+
   .communities,
   .messages {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    margin: 0 auto;
-    width: 50%;
-    position: relative;
+
+    @media only screen and (max-width: 991px) {
+      margin-bottom: 100px;
+    }
+
+    svg {
+      align-self: flex-start;
+    }
 
     h1 {
       font-size: 5em;
       font-family: 'Open Sans', sans-serif;
       font-weight: 700;
+
+      @media only screen and (max-width: 991px) {
+        font-size: 4em;
+      }
     }
 
     p {
       color: #888c8e;
-      font-size: 20px;
+      font-size: 22px;
+
+      @media only screen and (max-width: 991px) {
+        font-size: 16px;
+      }
     }
   }
 }
 
-.communities::before {
-  content: '';
-  display: block;
-  position: absolute;
-  background: url(/images/icon-communities.svg);
-  background-size: cover;
-  top: -15px;
-  left: 20px;
-  width: 36px;
-  height: 32px;
-}
-
-.messages::before {
-  content: '';
-  display: block;
-  position: absolute;
-  background: url(/images/icon-messages.svg);
-  background-size: cover;
-  top: -15px;
-  left: 10px;
-  width: 37px;
-  height: 32px;
-}
-
 .cta-btn-solid {
   color: white;
-  padding: 17px 100px;
+  padding: 15px 100px;
   border-radius: 50px;
   background: $pink;
   font-weight: 600;
   margin-bottom: 112px;
+
+  @media only screen and (max-width: 991px) {
+    padding: 15px 50px;
+  }
 }
 
 .two-column {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  place-items: center;
+
+  @media only screen and (max-width: 991px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .text-content {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  order: 2;
 
   h3 {
-    font-size: 30px;
+    font-size: 36px;
     margin-bottom: 10px;
+
+    @media only screen and (max-width: 991px) {
+      font-size: 25px;
+    }
   }
 
   p {
     font-size: 14px;
     width: 450px;
+
+    @media only screen and (max-width: 991px) {
+      width: 100%;
+      margin: 0 auto;
+    }
   }
 }
 
@@ -189,6 +227,7 @@ a {
 
   &::after {
     content: '';
+    display: block;
     position: absolute;
     bottom: -135px;
     height: 135px;
@@ -210,7 +249,7 @@ a {
 
 .app-detail-2 {
   margin: 6em 0;
-  padding: 2em 0 5em;
+  padding: 6em 0;
 
   img {
     width: 500px;
@@ -223,6 +262,10 @@ a {
 
 .push-right {
   margin-left: 4em;
+
+  @media only screen and (max-width: 991px) {
+    margin-left: 0;
+  }
 }
 
 .app-detail-3 {
@@ -258,6 +301,7 @@ a {
 
   &::after {
     content: '';
+    display: block;
     position: absolute;
     bottom: -135px;
     height: 135px;
@@ -281,10 +325,161 @@ a {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 150px 0;
+  padding: 100px 0;
 
   h3 {
     font-size: 38px;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
+    text-align: center;
+
+    @media only screen and (max-width: 991px) {
+      font-size: 27px;
+    }
+  }
+}
+
+.app-detail-1,
+.app-detail-2,
+.app-detail-3 {
+  @media only screen and (max-width: 991px) {
+    text-align: center;
+
+    img {
+      width: 75%;
+      margin-bottom: 75px;
+    }
+  }
+}
+
+footer {
+  background: $dark-cyan;
+  color: #ffffff;
+  font-size: 0.85em;
+  font-weight: 400;
+  padding: 75px 0;
+  margin-top: 80px;
+  position: relative;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -150px;
+    height: 150px;
+    width: 100%;
+    background: url(/images/bg-footer-top-desktop.svg) no-repeat;
+    background-size: cover;
+  }
+
+  .footer-info {
+    @media only screen and (max-width: 991px) {
+      order: 2;
+    }
+
+    p {
+      margin-top: 32px;
+    }
+  }
+
+  .contact-info {
+    padding: 25px 0;
+
+    li {
+      margin-bottom: 18px;
+
+      svg {
+        margin-right: 15px;
+      }
+    }
+  }
+
+  a {
+    color: #ffffff;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  ul li {
+    display: flex;
+    align-items: center;
+  }
+
+  .footer-info {
+    max-width: 300px;
+
+    .social-links a {
+      font-size: 30px;
+    }
+
+    .social-links a:hover {
+      color: #27bea7;
+      cursor: pointer;
+      transition: all 0.5s ease 0s;
+    }
+
+    .social-links a + a {
+      margin-left: 20px;
+    }
+  }
+
+  .newsletter {
+    align-self: flex-start;
+    @media only screen and (max-width: 991px) {
+      order: 1;
+    }
+    p {
+      margin-bottom: 40px;
+      max-width: 332px;
+    }
+
+    h4 {
+      font-size: 26px;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      @media only screen and (max-width: 991px) {
+        flex-direction: column;
+      }
+    }
+
+    input[type='email'] {
+      width: 315px;
+      height: 45px;
+      padding: 0.8em;
+      margin-right: 15px;
+      border-radius: 5px;
+      border: none;
+      font-size: 14px;
+
+      @media only screen and (max-width: 991px) {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 15px;
+      }
+    }
+
+    input[type='submit'] {
+      color: white;
+      padding: 13px 32px;
+      font-size: 14px;
+      font-family: 'Open Sans', sans-serif;
+      border-radius: 5px;
+      background: $pink;
+      font-weight: 600;
+      border: none;
+      text-align: center;
+      cursor: pointer;
+      justify-self: right;
+
+      @media only screen and (max-width: 991px) {
+        margin-bottom: 75px;
+      }
+    }
   }
 }

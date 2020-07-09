@@ -31,8 +31,18 @@ a:link {
 .navbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 75px 0;
   margin-bottom: 170px;
+}
+
+@media only screen and (max-width: 991px) {
+  .navbar {
+    padding: 25px 0;
+  }
+  .navbar img {
+    width: 100px;
+  }
 }
 
 .cta-btn-outline {
@@ -42,7 +52,13 @@ a:link {
   color: #ff52bf;
   font-size: 15px;
   text-transform: capitalize;
-  height: 41px;
+}
+
+@media only screen and (max-width: 991px) {
+  .cta-btn-outline {
+    padding: 5px 22px;
+    font-size: 13px;
+  }
 }
 
 .hero {
@@ -61,10 +77,23 @@ a:link {
   text-align: center;
 }
 
+@media only screen and (max-width: 991px) {
+  .hero h2 {
+    font-size: 27px;
+  }
+}
+
 .hero p {
   width: 50%;
   text-align: center;
   margin-bottom: 35px;
+}
+
+@media only screen and (max-width: 991px) {
+  .hero p {
+    width: 95%;
+    font-size: 14px;
+  }
 }
 
 .hero img {
@@ -76,12 +105,32 @@ a:link {
   margin: 0 4em;
 }
 
+@media only screen and (max-width: 991px) {
+  .stats {
+    margin: 0;
+    padding-bottom: 0;
+  }
+}
+
 .stats .communities,
 .stats .messages {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  margin: 0 auto;
-  width: 50%;
-  position: relative;
+}
+
+@media only screen and (max-width: 991px) {
+  .stats .communities,
+  .stats .messages {
+    margin-bottom: 100px;
+  }
+}
+
+.stats .communities svg,
+.stats .messages svg {
+  align-self: flex-start;
 }
 
 .stats .communities h1,
@@ -91,64 +140,81 @@ a:link {
   font-weight: 700;
 }
 
+@media only screen and (max-width: 991px) {
+  .stats .communities h1,
+  .stats .messages h1 {
+    font-size: 4em;
+  }
+}
+
 .stats .communities p,
 .stats .messages p {
   color: #888c8e;
-  font-size: 20px;
+  font-size: 22px;
 }
 
-.communities::before {
-  content: '';
-  display: block;
-  position: absolute;
-  background: url(/images/icon-communities.svg);
-  background-size: cover;
-  top: -15px;
-  left: 20px;
-  width: 36px;
-  height: 32px;
-}
-
-.messages::before {
-  content: '';
-  display: block;
-  position: absolute;
-  background: url(/images/icon-messages.svg);
-  background-size: cover;
-  top: -15px;
-  left: 10px;
-  width: 37px;
-  height: 32px;
+@media only screen and (max-width: 991px) {
+  .stats .communities p,
+  .stats .messages p {
+    font-size: 16px;
+  }
 }
 
 .cta-btn-solid {
   color: white;
-  padding: 17px 100px;
+  padding: 15px 100px;
   border-radius: 50px;
   background: #ff52bf;
   font-weight: 600;
   margin-bottom: 112px;
 }
 
+@media only screen and (max-width: 991px) {
+  .cta-btn-solid {
+    padding: 15px 50px;
+  }
+}
+
 .two-column {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  place-items: center;
+}
+
+@media only screen and (max-width: 991px) {
+  .two-column {
+    grid-template-columns: 1fr;
+  }
 }
 
 .text-content {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  order: 2;
 }
 
 .text-content h3 {
-  font-size: 30px;
+  font-size: 36px;
   margin-bottom: 10px;
+}
+
+@media only screen and (max-width: 991px) {
+  .text-content h3 {
+    font-size: 25px;
+  }
 }
 
 .text-content p {
   font-size: 14px;
   width: 450px;
+}
+
+@media only screen and (max-width: 991px) {
+  .text-content p {
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 
 .app-detail-1 {
@@ -189,6 +255,7 @@ a:link {
 
 .app-detail-1::after {
   content: '';
+  display: block;
   position: absolute;
   bottom: -135px;
   height: 135px;
@@ -213,7 +280,7 @@ a:link {
 
 .app-detail-2 {
   margin: 6em 0;
-  padding: 2em 0 5em;
+  padding: 6em 0;
 }
 
 .app-detail-2 img {
@@ -228,6 +295,12 @@ a:link {
 
 .push-right {
   margin-left: 4em;
+}
+
+@media only screen and (max-width: 991px) {
+  .push-right {
+    margin-left: 0;
+  }
 }
 
 .app-detail-3 {
@@ -268,6 +341,7 @@ a:link {
 
 .app-detail-3::after {
   content: '';
+  display: block;
   position: absolute;
   bottom: -135px;
   height: 135px;
@@ -294,10 +368,175 @@ a:link {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 150px 0;
+  padding: 100px 0;
 }
 
 .bottom-cta h3 {
   font-size: 38px;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 991px) {
+  .bottom-cta h3 {
+    font-size: 27px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .app-detail-1,
+  .app-detail-2,
+  .app-detail-3 {
+    text-align: center;
+  }
+  .app-detail-1 img,
+  .app-detail-2 img,
+  .app-detail-3 img {
+    width: 75%;
+    margin-bottom: 75px;
+  }
+}
+
+footer {
+  background: #00252e;
+  color: #ffffff;
+  font-size: 0.85em;
+  font-weight: 400;
+  padding: 75px 0;
+  margin-top: 80px;
+  position: relative;
+}
+
+footer::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -150px;
+  height: 150px;
+  width: 100%;
+  background: url(/images/bg-footer-top-desktop.svg) no-repeat;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 991px) {
+  footer .footer-info {
+    order: 2;
+  }
+}
+
+footer .footer-info p {
+  margin-top: 32px;
+}
+
+footer .contact-info {
+  padding: 25px 0;
+}
+
+footer .contact-info li {
+  margin-bottom: 18px;
+}
+
+footer .contact-info li svg {
+  margin-right: 15px;
+}
+
+footer a {
+  color: #ffffff;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer ul li {
+  display: flex;
+  align-items: center;
+}
+
+footer .footer-info {
+  max-width: 300px;
+}
+
+footer .footer-info .social-links a {
+  font-size: 30px;
+}
+
+footer .footer-info .social-links a:hover {
+  color: #27bea7;
+  cursor: pointer;
+  transition: all 0.5s ease 0s;
+}
+
+footer .footer-info .social-links a + a {
+  margin-left: 20px;
+}
+
+footer .newsletter {
+  align-self: flex-start;
+}
+
+@media only screen and (max-width: 991px) {
+  footer .newsletter {
+    order: 1;
+  }
+}
+
+footer .newsletter p {
   margin-bottom: 40px;
+  max-width: 332px;
+}
+
+footer .newsletter h4 {
+  font-size: 26px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+footer .newsletter form {
+  display: flex;
+}
+
+@media only screen and (max-width: 991px) {
+  footer .newsletter form {
+    flex-direction: column;
+  }
+}
+
+footer .newsletter input[type='email'] {
+  width: 315px;
+  height: 45px;
+  padding: 0.8em;
+  margin-right: 15px;
+  border-radius: 5px;
+  border: none;
+  font-size: 14px;
+}
+
+@media only screen and (max-width: 991px) {
+  footer .newsletter input[type='email'] {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}
+
+footer .newsletter input[type='submit'] {
+  color: white;
+  padding: 13px 32px;
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 5px;
+  background: #ff52bf;
+  font-weight: 600;
+  border: none;
+  text-align: center;
+  cursor: pointer;
+  justify-self: right;
+}
+
+@media only screen and (max-width: 991px) {
+  footer .newsletter input[type='submit'] {
+    margin-bottom: 75px;
+  }
 }
