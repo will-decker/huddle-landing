@@ -41,8 +41,13 @@ a:link {
     padding: 25px 0;
   }
   .navbar img {
-    width: 100px;
+    width: 125px;
   }
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
 }
 
 .cta-btn-outline {
@@ -207,7 +212,7 @@ a:link {
 
 .text-content p {
   font-size: 14px;
-  width: 450px;
+  max-width: 450px;
 }
 
 @media only screen and (max-width: 991px) {
@@ -229,6 +234,12 @@ a:link {
   margin: 0 auto;
 }
 
+@media only screen and (max-width: 527px) {
+  .app-detail-1 {
+    padding: 5em 0;
+  }
+}
+
 @media only screen and (min-width: 2000px) {
   .app-detail-1 {
     padding-top: 5em;
@@ -244,6 +255,15 @@ a:link {
   width: 100%;
   background: url(/images/bg-section-top-desktop-1.svg) no-repeat;
   background-size: cover;
+}
+
+@media only screen and (max-width: 527px) {
+  .app-detail-1::before {
+    top: -125px;
+    height: 125px;
+    background: url(/images/bg-section-top-mobile-1.svg) no-repeat;
+    background-size: cover;
+  }
 }
 
 @media only screen and (min-width: 1800px) {
@@ -262,6 +282,15 @@ a:link {
   width: 100%;
   background: url(/images/bg-section-bottom-desktop-1.svg) no-repeat;
   background-size: cover;
+}
+
+@media only screen and (max-width: 527px) {
+  .app-detail-1::after {
+    bottom: -80px;
+    height: 80px;
+    background: url(/images/bg-section-bottom-mobile-1.svg) no-repeat;
+    background-size: cover;
+  }
 }
 
 @media only screen and (min-width: 1500px) {
@@ -287,6 +316,12 @@ a:link {
   width: 500px;
 }
 
+@media only screen and (max-width: 1024px) {
+  .app-detail-2 {
+    padding-bottom: 170px;
+  }
+}
+
 @media only screen and (min-width: 1500px) {
   .app-detail-2 {
     margin: 16em 0;
@@ -310,6 +345,18 @@ a:link {
   position: relative;
 }
 
+@media only screen and (max-width: 527px) {
+  .app-detail-3 {
+    padding-bottom: 5em;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  .app-detail-3 {
+    margin-bottom: 220px;
+  }
+}
+
 .app-detail-3 img {
   width: 500px;
 }
@@ -323,6 +370,13 @@ a:link {
   width: 100%;
   background: url(/images/bg-section-top-desktop-2.svg) no-repeat;
   background-size: cover;
+}
+
+@media only screen and (max-width: 527px) {
+  .app-detail-3::before {
+    background: url(/images/bg-section-top-mobile-2.svg) no-repeat;
+    background-size: cover;
+  }
 }
 
 @media only screen and (min-width: 1500px) {
@@ -348,6 +402,13 @@ a:link {
   width: 100%;
   background: url(/images/bg-section-bottom-desktop-2.svg) no-repeat;
   background-size: cover;
+}
+
+@media only screen and (max-width: 527px) {
+  .app-detail-3::after {
+    background: url(/images/bg-section-bottom-mobile-2.svg) no-repeat;
+    background-size: cover;
+  }
 }
 
 @media only screen and (min-width: 1500px) {
@@ -407,6 +468,12 @@ footer {
   position: relative;
 }
 
+@media only screen and (min-width: 1500px) {
+  footer {
+    margin-top: 200px;
+  }
+}
+
 footer::before {
   content: '';
   display: block;
@@ -416,6 +483,38 @@ footer::before {
   width: 100%;
   background: url(/images/bg-footer-top-desktop.svg) no-repeat;
   background-size: cover;
+}
+
+@media only screen and (max-width: 1024px) {
+  footer::before {
+    top: -150px;
+    height: 150px;
+    background: url(/images/bg-footer-top-mobile.svg) no-repeat;
+    background-size: cover;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  footer::before {
+    top: -50px;
+    height: 50px;
+    background: url(/images/bg-footer-top-mobile.svg) no-repeat;
+    background-size: cover;
+  }
+}
+
+@media only screen and (min-width: 1500px) {
+  footer::before {
+    top: -225px;
+    height: 225px;
+  }
+}
+
+@media only screen and (min-width: 2000px) {
+  footer::before {
+    top: -260px;
+    height: 260px;
+  }
 }
 
 @media only screen and (max-width: 991px) {
