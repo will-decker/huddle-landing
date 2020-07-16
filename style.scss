@@ -55,6 +55,29 @@ a {
   }
 }
 
+.cta-btn-solid {
+  font-size: 20px;
+  color: white;
+  padding: 20px 75px;
+  border: solid 1px $pink;
+  border-radius: 50px;
+  background: $pink;
+  font-weight: 600;
+  margin-bottom: 112px;
+  box-shadow: 0 0.2rem 0.5rem 0.2rem rgba(0, 37, 46, 0.17);
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: none;
+    color: $pink;
+    background: none;
+  }
+
+  @media only screen and (max-width: 991px) {
+    padding: 15px 50px;
+  }
+}
+
 .cta-btn-outline {
   padding: 7px 22px;
   border: solid 1px $pink;
@@ -62,6 +85,12 @@ a {
   color: $pink;
   font-size: 15px;
   text-transform: capitalize;
+  transition: 0.3s ease-in-out;
+
+  &:hover {
+    background-color: $pink;
+    color: #ffffff;
+  }
 
   @media only screen and (max-width: 991px) {
     padding: 5px 22px;
@@ -89,12 +118,13 @@ a {
   }
 
   p {
+    font-size: 18px;
     width: 50%;
     text-align: center;
-    margin-bottom: 35px;
+    margin-bottom: 40px;
 
     @media only screen and (max-width: 991px) {
-      width: 95%;
+      width: 88%;
       font-size: 14px;
     }
   }
@@ -150,19 +180,6 @@ a {
   }
 }
 
-.cta-btn-solid {
-  color: white;
-  padding: 15px 100px;
-  border-radius: 50px;
-  background: $pink;
-  font-weight: 600;
-  margin-bottom: 112px;
-
-  @media only screen and (max-width: 991px) {
-    padding: 15px 50px;
-  }
-}
-
 .two-column {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -177,7 +194,10 @@ a {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  order: 2;
+
+  @media only screen and (max-width: 991px) {
+    order: 2;
+  }
 
   h3 {
     font-size: 36px;
@@ -190,12 +210,12 @@ a {
 
   p {
     font-size: 14px;
-
     max-width: 450px;
 
     @media only screen and (max-width: 991px) {
       width: 100%;
       margin: 0 auto;
+      font-size: 18px;
     }
   }
 }
@@ -204,11 +224,10 @@ a {
   background-color: $pale-blue;
   position: relative;
   margin: 10em 0;
-  padding: 2em 0;
+  padding: 4em 0;
 
   img {
     width: 500px;
-    margin: 0 auto;
   }
 
   @media only screen and (max-width: 527px) {
@@ -299,11 +318,11 @@ a {
 .app-detail-3 {
   background-color: $pale-blue;
   margin: 10em 0;
-  padding: 2em 0;
+  padding: 5em 0;
   position: relative;
 
   @media only screen and (max-width: 527px) {
-    padding-bottom: 5em;
+    padding-bottom: 9em;
   }
 
   @media only screen and (min-width: 1500px) {
@@ -375,11 +394,11 @@ a {
 
   h3 {
     font-size: 38px;
-    margin-bottom: 25px;
+    margin-bottom: 35px;
     text-align: center;
 
     @media only screen and (max-width: 991px) {
-      font-size: 27px;
+      font-size: 30px;
     }
   }
 }
@@ -391,7 +410,7 @@ a {
     text-align: center;
 
     img {
-      width: 75%;
+      width: 90%;
       margin-bottom: 75px;
     }
   }
@@ -550,6 +569,12 @@ footer {
       text-align: center;
       cursor: pointer;
       justify-self: right;
+      transition: 0.3s ease-in-out;
+
+      &:hover {
+        color: $pink;
+        background: #ffffff;
+      }
 
       @media only screen and (max-width: 991px) {
         margin-bottom: 75px;

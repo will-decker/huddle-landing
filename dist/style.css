@@ -50,6 +50,31 @@ a:link {
   align-items: center;
 }
 
+.cta-btn-solid {
+  font-size: 20px;
+  color: white;
+  padding: 20px 75px;
+  border: solid 1px #ff52bf;
+  border-radius: 50px;
+  background: #ff52bf;
+  font-weight: 600;
+  margin-bottom: 112px;
+  box-shadow: 0 0.2rem 0.5rem 0.2rem rgba(0, 37, 46, 0.17);
+  transition: 0.3s ease-in-out;
+}
+
+.cta-btn-solid:hover {
+  box-shadow: none;
+  color: #ff52bf;
+  background: none;
+}
+
+@media only screen and (max-width: 991px) {
+  .cta-btn-solid {
+    padding: 15px 50px;
+  }
+}
+
 .cta-btn-outline {
   padding: 7px 22px;
   border: solid 1px #ff52bf;
@@ -57,6 +82,12 @@ a:link {
   color: #ff52bf;
   font-size: 15px;
   text-transform: capitalize;
+  transition: 0.3s ease-in-out;
+}
+
+.cta-btn-outline:hover {
+  background-color: #ff52bf;
+  color: #ffffff;
 }
 
 @media only screen and (max-width: 991px) {
@@ -89,14 +120,15 @@ a:link {
 }
 
 .hero p {
+  font-size: 18px;
   width: 50%;
   text-align: center;
-  margin-bottom: 35px;
+  margin-bottom: 40px;
 }
 
 @media only screen and (max-width: 991px) {
   .hero p {
-    width: 95%;
+    width: 88%;
     font-size: 14px;
   }
 }
@@ -165,21 +197,6 @@ a:link {
   }
 }
 
-.cta-btn-solid {
-  color: white;
-  padding: 15px 100px;
-  border-radius: 50px;
-  background: #ff52bf;
-  font-weight: 600;
-  margin-bottom: 112px;
-}
-
-@media only screen and (max-width: 991px) {
-  .cta-btn-solid {
-    padding: 15px 50px;
-  }
-}
-
 .two-column {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -196,7 +213,12 @@ a:link {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  order: 2;
+}
+
+@media only screen and (max-width: 991px) {
+  .text-content {
+    order: 2;
+  }
 }
 
 .text-content h3 {
@@ -219,6 +241,7 @@ a:link {
   .text-content p {
     width: 100%;
     margin: 0 auto;
+    font-size: 18px;
   }
 }
 
@@ -226,12 +249,11 @@ a:link {
   background-color: #f5faff;
   position: relative;
   margin: 10em 0;
-  padding: 2em 0;
+  padding: 4em 0;
 }
 
 .app-detail-1 img {
   width: 500px;
-  margin: 0 auto;
 }
 
 @media only screen and (max-width: 527px) {
@@ -341,13 +363,13 @@ a:link {
 .app-detail-3 {
   background-color: #f5faff;
   margin: 10em 0;
-  padding: 2em 0;
+  padding: 5em 0;
   position: relative;
 }
 
 @media only screen and (max-width: 527px) {
   .app-detail-3 {
-    padding-bottom: 5em;
+    padding-bottom: 9em;
   }
 }
 
@@ -434,13 +456,13 @@ a:link {
 
 .bottom-cta h3 {
   font-size: 38px;
-  margin-bottom: 25px;
+  margin-bottom: 35px;
   text-align: center;
 }
 
 @media only screen and (max-width: 991px) {
   .bottom-cta h3 {
-    font-size: 27px;
+    font-size: 30px;
   }
 }
 
@@ -453,7 +475,7 @@ a:link {
   .app-detail-1 img,
   .app-detail-2 img,
   .app-detail-3 img {
-    width: 75%;
+    width: 90%;
     margin-bottom: 75px;
   }
 }
@@ -632,6 +654,12 @@ footer .newsletter input[type='submit'] {
   text-align: center;
   cursor: pointer;
   justify-self: right;
+  transition: 0.3s ease-in-out;
+}
+
+footer .newsletter input[type='submit']:hover {
+  color: #ff52bf;
+  background: #ffffff;
 }
 
 @media only screen and (max-width: 991px) {
