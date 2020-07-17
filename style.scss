@@ -74,7 +74,8 @@ a {
   }
 
   @media only screen and (max-width: 991px) {
-    padding: 15px 50px;
+    padding: 15px 60px;
+    font-size: 14px;
   }
 }
 
@@ -272,8 +273,8 @@ a {
     background-size: cover;
 
     @media only screen and (max-width: 527px) {
-      bottom: -80px;
-      height: 80px;
+      bottom: -60px;
+      height: 60px;
       background: url(/images/bg-section-bottom-mobile-1.svg) no-repeat;
       background-size: cover;
     }
@@ -325,6 +326,10 @@ a {
     padding-bottom: 9em;
   }
 
+  @media only screen and (max-width: 991px) {
+    margin-bottom: 80px;
+  }
+
   @media only screen and (min-width: 1500px) {
     margin-bottom: 220px;
   }
@@ -346,6 +351,8 @@ a {
     @media only screen and (max-width: 527px) {
       background: url(/images/bg-section-top-mobile-2.svg) no-repeat;
       background-size: cover;
+      top: -115px;
+      height: 115px;
     }
 
     @media only screen and (min-width: 1500px) {
@@ -372,6 +379,8 @@ a {
     @media only screen and (max-width: 527px) {
       background: url(/images/bg-section-bottom-mobile-2.svg) no-repeat;
       background-size: cover;
+      bottom: -115px;
+      height: 115px;
     }
 
     @media only screen and (min-width: 1500px) {
@@ -440,13 +449,13 @@ footer {
     background-size: cover;
 
     @media only screen and (max-width: 1024px) {
-      top: -150px;
+      top: -149px;
       height: 150px;
       background: url(/images/bg-footer-top-mobile.svg) no-repeat;
       background-size: cover;
     }
 
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 527px) {
       top: -50px;
       height: 50px;
       background: url(/images/bg-footer-top-mobile.svg) no-repeat;
